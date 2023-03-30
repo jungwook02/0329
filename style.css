@@ -1,0 +1,170 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width:960px;
+    margin: 0 auto;
+}
+
+/* -> container class에 있는 내용들을 모아줌 */
+
+
+/* ------------------------navigation bar */
+
+nav {
+    height: 80px;
+    background-color:crimson;
+    line-height: 80px;
+    /* -> nav의 높이를 조절 */
+}
+
+
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+
+    /* ->clearfix 적용(float된 Layout과 홈,menu,Techit 사이에 공백을 채워줌 이렇게 되면 밑에 <header>부분에 내용을 입력해도 위로 넘치지 않음) */
+}
+
+
+
+
+
+
+.nav-logo {
+    font-size: 30px;
+    float: left;
+    margin: 0;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-btn {
+    list-style-type: none;
+    margin: 0;
+}
+
+
+ul.nav-btn > li {
+    float: left;
+    margin-left: 25px;
+    font-size:20px;
+    font-weight: bold;
+}
+
+/* -> nav-btn클래스가 있는 ul태그 내부에 있는 li태그 */
+
+
+/* -----------------------------------header bar */
+
+.hd {
+    position:relative;
+    height: 600px;
+    text-align: center;
+}
+
+.hd-title {
+    font-size:80px;
+    margin-top:0 ;
+    margin-bottom:20px;
+    padding-top: 200px;
+
+}
+
+.hd-content {
+    font-size:25px;
+
+}
+
+.hd:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    opacity: 0.5;
+    background-image:url("./");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+/* -> background 설정 코드 */
+
+.hd .container {
+    position: relative;
+    color: black;
+}
+/* -> .hd 안에 있는 .container 클래스 */
+
+
+/* -------------------section bar */
+
+
+.sec {
+    text-align: center;
+    padding:100px 0;
+    background-color: #ffe4c4;
+}
+
+.sec article {
+    float:left;
+    width: 300px;
+    margin-right: 30px;
+    /* -> margin값 30을 준 이유는 총 내용물의 크기가 960px로 설정했기에 이미지를 300으로 3개를 두고 그 이미지 사이의 간격을 30으로 하면 총 960px로 맞는다 */
+}
+
+
+.sec article:last-child {
+    margin-right:0;
+    /* -> 마지막에 margin값을 주지 않음을 선언함으로서 960값을 맞춤 */
+}
+
+.sec article img{
+    width: 100%;
+    height: auto;
+}
+
+.card-img {
+    overflow: hidden;
+    width:300px;
+    height:300px;
+    
+}
+
+.sec::after {
+    content:"";
+    display: block;
+    clear:both;
+
+}
+/* -> float를 설정하였기에 clearfix를 시행함 */
+
+
+
+/* ------------------footer bar */
+
+.ft {
+    padding:15px;
+    text-align: center;
+    background-color: crimson;
+    font-weight: bold;
+}
